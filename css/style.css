@@ -1,27 +1,48 @@
-#nav-bar{
-    
+#nav-bar {
     position: fixed;
-    
-    width: auto;
-      
+    width: 100%;
+    color: white;
+    top: 0px;
 }
-#top-part{
+
+#top-part {
     position: relative;
 }
+
 body {
     padding: 1em;
-  }
-  
-  /* On screens that are 992px or less, set the background color to blue */
-  @media screen and (max-width: 992px) {
+}
+
+
+/* On screens that are 992px or less, set the background color to blue */
+
+@media screen and (max-width: 992px) {
     body {
-      background-color: blue;
+        background-color: blue;
     }
-  }
-  
-  /* On screens that are 600px or less, set the background color to olive */
-  @media screen and (max-width: 600px) {
+}
+
+
+/* On screens that are 600px or less, set the background color to olive */
+
+@media screen and (max-width: 600px) {
     body {
-      background-color: olive;
+        background-color: olive;
     }
-  }
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-flow: row wrap;
+    margin: 0 0 0 -.5rem;
+}
+
+.flex-container * {
+    flex: 1 0 20%;
+    /* less than 25% but more or equal to 20% to account for margins - when 4 across is required */
+    min-width: 200px;
+    /* min-width on flex items not working in older ios so use media queries instead*/
+    padding: 0 0.5rem 1rem;
+    margin: 0 0 .5rem .5rem;
+}
