@@ -12,7 +12,10 @@
 body {
     padding: 1em;
 }
-
+#space {
+   
+    margin: 40px;
+}
 
 /* On screens that are 992px or less, set the background color to blue */
 
